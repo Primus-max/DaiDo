@@ -10,7 +10,11 @@ const routes = [
     name: 'main-menu',
     component: MainMenu
   },
-
+  {
+    path: '/new-record',
+    name: 'new-record',
+    component: () => import('../views/NewRecord.vue')
+  },
   {
     path: '/about',
     name: 'about',

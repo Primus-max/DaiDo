@@ -21,6 +21,7 @@
     import ItemLink from './ItemLink.vue'
     import ItemAction from './ItemAction.vue'
     import ItemSubMenu from './ItemSubMenu'
+    import ItemSeparator from './ItemSeparator'
 
     export const MenuTypes = {
         link: 'link',
@@ -36,7 +37,7 @@
                 default: ['uk-nav-default', 'uk-nav-parent-icon']
             }
         },
-        components: { ItemLink, ItemAction, ItemSubMenu },
+        components: { ItemLink, ItemAction, ItemSubMenu, ItemSeparator },
         methods:{
             itemComponentName(item){
                 const type = item.type || MenuTypes.link

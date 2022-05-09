@@ -8,6 +8,7 @@ const {
 const {
   app
 } = require('electron')
+const {init: initEvents} = require('./events')
 
 const isDevMode = app.commandLine.hasSwitch('dev-mode')
 let height = 300
@@ -27,6 +28,8 @@ const mb = new menubar({
 })
 
 mb.on('after-create-windodw', () => isDevMode && mb.window.openDevTools())
-mb.on('ready', () => mb.tray.on('right-click', () => {
-  isDevMode && setTimeout(() => app.quit(), 200)
-}))
+// mb.on('ready', () => mb.tray.on('right-click', () => {
+//   isDevMode && setTimeout(() => app.quit(), 200)
+// }))
+
+initEvents()

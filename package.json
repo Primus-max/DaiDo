@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "electron app/app.js",
+    "start:dev": "npm run build && npm run start -- --dev-mode && mpn run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit"
